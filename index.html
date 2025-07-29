@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Erick Vasquez - Portafolio</title>
+  <link rel="icon" href="img/wojtek.png" type="image/x-icon" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- Preloader -->
+<div id="preloader" style="opacity: 0; transition: opacity 1s; display: none;">
+  <div class="sakura-flower"></div>
+  <div id="petal-container"></div>
+</div>
+<header class="header">
+  <nav class="nav">
+    <label class="switch">
+      <input type="checkbox" id="langToggle" />
+      <span class="slider"></span>
+    </label>
+    <a href="#inicio" data-key="nav-home">Inicio</a>
+    <a href="#sobre-mi" data-key="nav-about">Sobre mí</a>
+    <a href="#habilidades" data-key="nav-skills">Habilidades</a>
+    <a href="#proyectos" data-key="nav-projects">Proyectos</a>
+    <a href="#contacto" data-key="nav-contact">Contacto</a>
+  </nav>
+</header>
+
+<div class="container">
+
+  <section class="hero" id="inicio">
+    <h1 data-key="greeting">Hola, soy Erick Vasquez!</h1>
+    <h2><span id="typed-text">Desarrollador Full Stack</span><span id="cursor"></span></h2>
+    <div class="social-links">
+      <a href="https://github.com/Soldado-Lulu" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/andres-erick-vasquez/" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="AndresVasquezCurriculum.pdf" target="_blank"><i class="fas fa-file-pdf"></i></a>
+      <a href="#" onclick="copyEmail()" title="Copiar correo"><i class="fas fa-envelope"></i></a>
+    </div>
+  </section>
+
+  <section class="about-section" id="sobre-mi">
+    <div class="about-content">
+      <video width="50%" controls autoplay muted loop class="about-video">
+        <source src="img/video.mp4" type="video/mp4" />
+        Tu navegador no soporta video HTML5.
+      </video>
+      <div class="about-text">
+        <h3 data-key="about-title">Sobre mí</h3>
+        <p data-key="about-p1">Desarrollador web con pasión por la tecnología y la programación. Me especializo en el desarrollo Front-End,
+           creando interfaces atractivas y funcionales, y también cuento con conocimientos sólidos en Back-End. 
+           Me interesa todo lo relacionado con el desarrollo de software, especialmente en áreas como la inteligencia artificial y el diseño.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="skills-section" id="habilidades">
+    <h3 data-key="skills-title">Tecnologias</h3>
+    <div class="skills-grid">
+      <div class="skill-card">
+        <h4 data-key="skills-languages">Lenguajes de Programacion</h4>
+        <div class="skill-icons">
+          <img src="img/piton.png" alt="Python" class="skill-icon" />
+          <img src="img/js.png" alt="JavaScript" class="skill-icon" />
+          <img src="img/c.png" alt="C#" class="skill-icon" />
+          <img src="/img/html.png" alt="HTML" class="skill-icon" />
+          <img src="img/css.png" alt="CSS" class="skill-icon" />
+        </div>
+      </div>
+
+      <div class="skill-card">
+        <h4 data-key="skills-frameworks">Frameworks</h4>
+        <div class="skill-icons">
+          <img src="img/react.png" alt="React" class="skill-icon" />
+        </div>
+      </div>
+
+      <div class="skill-card">
+        <h4 data-key="skills-databases">Bases de datos</h4>
+        <div class="skill-icons">
+          <img src="img/firebase.png" alt="FireBase" class="skill-icon" />
+
+          <img src="img/mongo.png" alt="Mongo" class="skill-icon" />
+        </div>
+      </div>
+
+      <div class="skill-card">
+        <h4 data-key="skills-tools">Herramientas</h4>
+        <div class="skill-icons">
+          <img src="img/git.png" alt="Git" class="skill-icon" />
+          <img src="img/github.png" alt="GitHub" class="skill-icon" />
+          <img src="img/n.png" alt="Notion" class="skill-icon" />
+          <img src="img/trello.png" alt="Trello" class="skill-icon" />
+
+        </div>
+      </div>
+
+      <div class="skill-card">
+        <h4 data-key="skills-langs">Idiomas</h4>
+        <div class="lang-item">
+          <img src="img/reino.png" alt="Inglés" class="flag" />
+          <span data-key="lang-english">A2 - En formación</span>
+        </div>
+        <div class="lang-item">
+          <img src="img/espana.png" alt="Español" class="flag" />
+          <span data-key="lang-spanish">Nativo</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+<!-- 
+  <section class="projects-section" id="proyectos">
+    <h3 data-key="projects-title">Proyectos</h3>
+    <div class="project-card">
+      <div class="project-image"></div>
+      <div class="project-info">
+        <h4 class="project-title" data-key="project-dacky-title">DACKY</h4>
+        <p class="project-description" data-key="project-dacky-description">Aplicación de rastreo GPS para mascotas</p>
+        <a href="https://github.com/smiling011/ProyectoDacky.git" target="_blank" class="project-link" data-key="project-dacky-link">Ver repositorio</a>
+        <div class="skill-icons-mini">
+          <img src="img/file_type_flutter_icon_130599.png" alt="Flutter" class="skill-icon-mini" />
+          <img src="img/prog-flask_icon-icons.com_50797.png" alt="Flask" class="skill-icon-mini" />
+          <img src="img/piton.png" alt="Python" class="skill-icon-mini" />
+          <img src="img/dart.svg" alt="Dart" class="skill-icon-mini" />
+          <img src="img/mysql_original_wordmark_logo_icon_146417.png" alt="MySQL" class="skill-icon-mini" />
+          <img src="img/notion_logo_icon_145025.png" alt="Notion" class="skill-icon-mini" />
+          <img src="img/figma_logo_icon_170157.png" alt="Figma" class="skill-icon-mini" />
+          <img src="img/docker_icon_146192.png" alt="Docker" class="skill-icon-mini" />
+        </div>
+      </div>
+    </div>
+  </section>
+-->
+  <section class="contact-section" id="contacto">
+    <h3 data-key="contact-title">Contacto</h3>
+
+    <div class="contact-item">
+      <i class="fas fa-phone"></i>
+      <span id="phone-text">+591 75952931</span>
+      <i class="fas fa-copy copy-icon" onclick="copyToClipboard('phone-text')"></i>
+    </div>
+
+    <div class="contact-item">
+      <i class="fas fa-envelope"></i>
+      <span id="email-text">wojtekvasquez@gmail.com</span>
+      <i class="fas fa-copy copy-icon" onclick="copyToClipboard('email-text')"></i>
+    </div>
+
+    <a class="contact-item" href="https://www.linkedin.com/in/andres-erick-vasquez/" target="_blank">
+      <i class="fab fa-linkedin"></i>
+      <span data-key="linkedin-profile">Mi perfil de LinkedIn</span>
+    </a>
+
+    <a class="contact-item" href="https://github.com/Soldado-Lulu" target="_blank">
+      <i class="fab fa-github"></i>
+      <span data-key="github-profile">Mi perfil de GitHub</span>
+    </a>
+
+    <a href="AndresVasquezCurriculum.pdf" target="_blank" class="cv-button" data-key="cv-button">CV</a>
+  </section>
+
+</div>
+
+<footer class="footer">
+  <p data-key="footer-text">Erick Vasquez 2025 © Todos los derechos reservados</p>
+</footer>
+
+<script src="lang.js"></script>
+<script src="script.js"></script>
+<div id="toast" class="toast">¡Copiado!</div>
+<script src="https://cdn.jsdelivr.net/npm/tsparticles@2.11.1/tsparticles.bundle.min.js"></script>
+
+</body>
+</html>
